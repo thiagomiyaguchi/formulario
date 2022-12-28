@@ -1,0 +1,9 @@
+[{
+    "plataforma":"playstation",
+    "jogos":["1","2","3","4","5"]
+},
+{
+    "plataforma":"xbox",
+    "jogos":["a","b","c","d","e"]
+}
+]

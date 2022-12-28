@@ -1,0 +1,23 @@
+.campo-texto{
+    display: flex;
+    justify-content: space-between;
+    max-width: 80%;
+    padding: 5px;
+    margin: 0 auto;
+}
+
+.campo-texto label{
+    font-weight: bold;
+    padding: 5px;
+   
+}
+
+.campo-texto input{
+    flex-basis: 70%;
+}
+
+@media (max-width: 600px) {
+    .campo-texto {
+       flex-direction: column;
+    }
+  }
