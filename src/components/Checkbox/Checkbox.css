@@ -1,34 +1,37 @@
-.checkbox{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    max-width: 80%;
-    padding: 5px;
-    margin: 0 auto;
+.checkbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 80%;
+  padding: 5px;
+  margin: 0 auto;
 }
 
-.checkbox label{
-    font-weight: bold;
-    padding: 5px;
+.checkbox label {
+  font-weight: bold;
+  padding: 5px;
 }
 
-.opcoes{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
- 
+.opcoes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.opcao{
-    display: flex;
-    flex-wrap: nowrap;
+.opcao {
+  display: flex;
+  flex-wrap: nowrap;
 
-    flex-basis: 25%;
-    text-align: center;
+  flex-basis: 25%;
+  text-align: center;
+}
+
+.opcao label {
+  white-space: nowrap;
 }
 
 @media (max-width: 600px) {
-    .checkbox {
-       flex-direction: column;
-    }
+  .opcoes {
+    flex-direction: column;
   }
+}

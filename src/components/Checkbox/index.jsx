@@ -1,40 +1,26 @@
-import './Checkbox.css'
+import './Checkbox.css';
 
-export default function Checkbox() {
-    return(
+export default function Checkbox(props) {
+  const plataformaSelecionada = props.itens.filter(
+    (plataformaAtual) => plataformaAtual.plataforma === props.plataforma
+  );
+
+  return plataformaSelecionada != '' ? (
     <div className='checkbox'>
-        <label>Jogos:</label>
-        <div className='opcoes'>
-            <div className="opcao">
-                <input type="checkbox" id="masculino" name="jogos" value="masculino" />
-                <label for="masculino">Masculino</label>
-            </div>
+      <label>Jogos:</label>
 
-            <div className="opcao">
-                <input type="checkbox" id="masculino" name="jogos" value="masculino" />
-                <label for="masculino">Masculino</label>
-            </div>
-
-            <div className="opcao">
-                <input type="checkbox" id="masculino" name="jogos" value="masculino" />
-                <label for="masculino">Masculino</label>
-            </div>
-
-            <div className="opcao">
-                <input type="checkbox" id="masculino" name="jogos" value="masculino" />
-                <label for="masculino">Masculino</label>
-            </div>
-
-            <div className="opcao">
-                <input type="checkbox" id="masculino" name="jogos" value="masculino" />
-                <label for="masculino">Masculino</label>
-            </div>
-
-            
-
-      
-        </div>
-
+      <div className='opcoes'>
+        {plataformaSelecionada[0].jogos.map((item) => (
+          <div className='opcao'>
+            <input type='checkbox' id={item} name={item} value={item} />
+            <label key={item} htmlFor={item}>
+              {item}
+            </label>
+          </div>
+        ))}
+      </div>
     </div>
-    )
+  ) : (
+    ''
+  );
 }

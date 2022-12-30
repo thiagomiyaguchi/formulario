@@ -1,0 +1,21 @@
+[
+  {
+    "plataforma": "Playstation",
+    "jogos": ["Tomb Raider", "Fifa 2023", "God of War", "Batman", "Far Cry 5"]
+  },
+  {
+    "plataforma": "Xbox",
+    "jogos": [
+      "Half Life",
+      "Minecraft",
+      "GTA V",
+      "Mafia 3",
+      "NBA 2K23 1567486 ",
+      "GTA V",
+      "Mafia 3",
+      "NBA 2K23",
+
+      "Minecraft"
+    ]
+  }
+]

@@ -1,16 +1,21 @@
-import './ListaSuspensa.css'
+import './ListaSuspensa.css';
 
-export default function ListaSuspensa(props){
-    
-    return(
-        <div className="lista-suspensa">
-            <label htmlFor="lista-suspensa">{props.label}</label>
-            <select name="lista-suspensa" id="lista-suspensa">
-                <option selected disabled hidden>{props.placeholder}</option>
-                {props.itens.map((item)=>{
-                    return <option key={item}>{item}</option>
-                })}
-            </select>
-        </div>
-    )
+export default function ListaSuspensa(props) {
+  function aoSelecionar(event) {
+    // console.log(event.target.value);
+    props.listarJogos(event);
+  }
+  return (
+    <div className='lista-suspensa'>
+      <label htmlFor={props.label}>{props.label}</label>
+      <select onChange={aoSelecionar} name={props.label} id={props.label}>
+        <option selected disabled hidden>
+          {props.placeholder}
+        </option>
+        {props.itens.map((item) => {
+          return <option key={item}>{item}</option>;
+        })}
+      </select>
+    </div>
+  );
 }

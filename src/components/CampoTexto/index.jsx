@@ -1,12 +1,10 @@
-import './CampoTexto.css'
+import './CampoTexto.css';
 
-export default function CampoTexto(props){
-    return(
-
+export default function CampoTexto(props) {
+  return (
     <div className='campo-texto'>
-        <label htmlFor="nome">{props.label}</label>
-        <input type={"text"} id="nome" name="nome" />
+      <label htmlFor={props.name}>{props.label}</label>
+      <input type={'text'} id={props.name} name={props.name} />
     </div>
-       
-    )
+  );
 }
