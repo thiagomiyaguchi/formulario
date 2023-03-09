@@ -10,12 +10,10 @@ export default function Checkbox(props) {
       <label>Jogos:</label>
 
       <div className='opcoes'>
-        {plataformaSelecionada[0].jogos.map((item) => (
-          <div className='opcao'>
+        {plataformaSelecionada[0].jogos.map((item, index) => (
+          <div key={index} className='opcao'>
             <input type='checkbox' id={item} name={item} value={item} />
-            <label key={item} htmlFor={item}>
-              {item}
-            </label>
+            <label htmlFor={item}>{item}</label>
           </div>
         ))}
       </div>

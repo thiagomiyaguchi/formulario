@@ -1,0 +1,38 @@
+.resultados {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, auto);
+  gap: 10px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2);
+  margin: 20px auto;
+  padding: 20px 15px;
+  width: 70%;
+}
+
+/* p {
+  margin: 12px;
+} */
+.nome {
+  display: flex;
+  justify-content: space-around;
+}
+
+.aluno {
+  /* display: flex; */
+  line-height: 0;
+  border: 1px solid #ccc;
+}
+
+@media (max-width: 600px) {
+  .formulario {
+    width: 90%;
+  }
+}
+
+.lista {
+  display: flex;
+  flex-direction: column;
+  margin: 5px 15px;
+}

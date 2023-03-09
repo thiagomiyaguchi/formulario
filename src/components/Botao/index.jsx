@@ -1,7 +1,5 @@
-import './Botao.css'
+import './Botao.css';
 
-export default function Botao() {
-    return(
-        <button>Botão</button>
-    )
+export default function Botao(props) {
+  return <button>{props.nome}</button>;
 }

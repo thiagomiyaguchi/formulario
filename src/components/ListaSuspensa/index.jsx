@@ -2,8 +2,7 @@ import './ListaSuspensa.css';
 
 export default function ListaSuspensa(props) {
   function aoSelecionar(event) {
-    // console.log(event.target.value);
-    props.listarJogos(event);
+    props.listar(event);
   }
   return (
     <div className='lista-suspensa'>
