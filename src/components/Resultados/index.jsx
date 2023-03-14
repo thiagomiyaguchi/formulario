@@ -3,9 +3,9 @@ import './Resultados.css';
 function Resultados(props) {
   return (
     <div className='resultados'>
-      {props.itens.alunos.map((item) => {
+      {props.itens.map((item) => {
         return (
-          <div className='aluno'>
+          <div className='aluno' key={item._id}>
             <div className='nome'>
               <p>{item.nome}</p>
               <p>{item.turma}</p>

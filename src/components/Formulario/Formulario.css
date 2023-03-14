@@ -1,14 +1,14 @@
-.formulario{
-    border: 1px solid #ccc;
-    border-radius: 15px;
-    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
-    margin: 20px auto;
-    padding: 20px 0;
-    width: 70%;
+.formulario {
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2);
+  margin: 20px auto;
+  padding: 20px 0;
+  width: 80%;
 }
 
 @media (max-width: 600px) {
-    .formulario {
-        width: 90%;
-    }
+  .formulario {
+    width: 90%;
   }
+}

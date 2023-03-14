@@ -8,9 +8,7 @@ export default function ListaSuspensa(props) {
     <div className='lista-suspensa'>
       <label htmlFor={props.label}>{props.label}</label>
       <select onChange={aoSelecionar} name={props.label} id={props.label}>
-        <option selected disabled hidden>
-          {props.placeholder}
-        </option>
+        <option defaultValue={true}>{props.placeholder}</option>
         {props.itens.map((item) => {
           return <option key={item}>{item}</option>;
         })}

@@ -17,14 +17,19 @@ export default function BuscaAluno() {
   const [turma, setTurma] = useState('');
   const [plataformas, setPlataformas] = useState([]);
   const [resultados, setResultados] = useState([]);
+  const [filtros, setFiltros] = useState([]);
 
   const getAlunos = async () => {
     try {
       const resultadosGet = await axios.get(
         'http://localhost:5000/api/v1/alunos'
       );
-      setPlataformas(resultadosGet.data.alunos.map((item) => item.plataforma));
-      setResultados(resultadosGet.data);
+      const listaPlataformas = resultadosGet.data.alunos.map(
+        (item) => item.plataforma
+      );
+      const plataformasUnicas = [...new Set(listaPlataformas)];
+      setPlataformas(plataformasUnicas);
+      setResultados(resultadosGet.data.alunos);
     } catch (error) {
       console.log(error);
     }
@@ -34,12 +39,14 @@ export default function BuscaAluno() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try {
-      await axios.get('http://localhost:5000/api/v1/alunos');
-    } catch (error) {
-      console.log(error);
-    }
+    setFiltros(
+      resultados
+        .filter((item) => item.plataforma == plataforma)
+        .filter((item) => item.turma == turma)
+    );
   };
+
+  // console.log(resultados);
 
   return (
     <>
@@ -77,7 +84,7 @@ export default function BuscaAluno() {
 
         <Botao nome='Filtrar' />
       </form>
-      {!isLoading && <Resultados itens={resultados} />}
+      {!isLoading && <Resultados itens={filtros} />}
     </>
   );
 }
